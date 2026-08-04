@@ -8,12 +8,4 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Geode CLI
-        uses: geode-sdk/actions/install-cli@main
-
-      - name: Build Mod
-        run: geode build --all-platforms
+    uses: geode-sdk/geode-actions/build.yml@main
