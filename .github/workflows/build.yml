@@ -12,5 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build with Geode Action
-        uses: geode-sdk/geode-action@main
+      - name: Install Geode CLI via Python & Build
+        shell: pwsh
+        run: |
+          pip install geode-cli
+          geode build --all-platforms
+          
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: geode-mod
+          path: build/*.geode
