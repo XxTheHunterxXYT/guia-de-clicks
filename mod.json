@@ -1,0 +1,17 @@
+{
+	"geode": "5.8.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "vasostyles.gd-guia-de-clicks",
+	"name": "GD guia de clicks",
+	"version": "v1.0.0",
+	"developer": "Vasostyles",
+	"description": "simple mod -.-",
+	"dependencies": {
+		"geode.node-ids": ">=v1.23.3"
+	}
+}
