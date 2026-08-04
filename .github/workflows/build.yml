@@ -8,11 +8,4 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install Geode CLI & Build
-        run: |
-          Invoke-RestMethod "https://geode-sdk.org/install.ps1" | Invoke-Expression
-          geode build --all-platforms
+    uses: geode-sdk/actions/build@main
