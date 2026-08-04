@@ -1,0 +1,5 @@
+name: Build Geode Mod
+on: [push, pull_request]
+jobs:
+  build:
+    uses: geode-sdk/geode-actions/.github/workflows/build.yml@main
