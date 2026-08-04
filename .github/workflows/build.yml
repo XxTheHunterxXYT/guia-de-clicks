@@ -8,4 +8,14 @@ on:
 
 jobs:
   build:
-    uses: geode-sdk/geode-actions/build.yml@main
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Geode CLI
+        run: |
+          Invoke-WebRequest -Uri "https://github.com/geode-sdk/cli/releases/latest/download/geode.exe" -OutFile "geode.exe"
+          ./geode --version
+
+      - name: Build Mod
+        run: ./geode build --all-platforms
